@@ -1,0 +1,32 @@
+<div class="container my-5">
+    <h1 class="mb-3">Add New Product</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <form #form="ngForm" (ngSubmit)="addProduct()">
+          <div class="mb-3">
+            <label for="Id" class="form-label">Category-Id</label>
+            <input type="number" class="form-control" id="id" name="id" [(ngModel)]="addProductRequest.id" required>
+          </div>
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="addProductRequest.name" required>
+          </div>
+          <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="number" class="form-control" id="price" name="price" [(ngModel)]="addProductRequest.price" required>
+          </div>
+          <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <input type="text" class="form-control" id="description" name="description" [(ngModel)]="addProductRequest.description" required>
+          </div>
+          <div class="mb-3">
+            <label for="category_id" class="form-label">category_id</label>
+            <input type="number" class="form-control" id="category_id" name="category_id" [(ngModel)]="addProductRequest.category_id" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <button [disabled]="!form.submitted" [routerLink]="['param']" class="btn btn-primary mt-3">Next</button>
+      </div>
+    </div>
+  </div>
+  

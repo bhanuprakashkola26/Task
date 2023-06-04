@@ -11,23 +11,23 @@ export class CategoryService {
   constructor(private http: HttpClient) { }
 
   getAllCategories(): Observable<Category[]> {
-    return this.http.get<Category[]>('https://localhost:7209/api/Category');
+    return this.http.get<Category[]>('https://localhost:7069/api/Category');
   }
 
   addCategory(addCategoryRequest: Category): Observable<Category> {
-    return this.http.post<Category>('https://localhost:7209/api/Category', addCategoryRequest);
+    return this.http.post<Category>('https://localhost:7069/api/Category', addCategoryRequest);
   }
 
   getCategoryById(id: number): Observable<Category> {
-    return this.http.get<Category>('https://localhost:7209/api/Category/' + id);
+    return this.http.get<Category>('https://localhost:7069/api/Category/' + id);
   }
 
   updateCategory(id: number, updateCategory: Category): Observable<Category> {
-    return this.http.put<Category>('https://localhost:7209/api/Category/' + id, updateCategory);
+    return this.http.put<Category>('https://localhost:7069/api/Category/' + id, updateCategory);
   }
 
   deleteCategory(id: number): Observable<Category> {
-    return this.http.delete<Category>('https://localhost:7209/api/Category/' + id);
+    return this.http.delete<Category>('https://localhost:7069/api/Category/' + id);
   }
   
 }

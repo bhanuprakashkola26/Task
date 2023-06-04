@@ -8,6 +8,8 @@
                 <th>Price</th>
                 <th>Description</th>
                 <th>Category_id</th>
+                <th>Specifications</th>
+                <th>Modify</th>
             </tr>
         </thead>
         <tbody>
@@ -17,6 +19,7 @@
                 <td>{{product.price}}</td>
                 <td>{{product.description}}</td>
                 <td>{{product.category_id}}</td>
+                <td><a [routerLink]="['Param',product.id]">view</a></td>
                 <td><a [routerLink]="['edit',product.id]">view</a></td>
             </tr>
         </tbody>

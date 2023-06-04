@@ -14,22 +14,12 @@
                     name = "name" [(ngModel)]="parameterdetails.name">
                 </div>
                 <div class="mb-3">
-                    <label for="Price" class="form-label">Price</label>
-                    <input type="number" class="form-control" id="Price"
-                    name = "price" [(ngModel)]="productdetails.price">
-                </div>
-                <div class="mb-3">
-                    <label for="Description" class="form-label">Description</label>
-                    <input type="string" class="form-control" id="Description"
-                    name = "description" [(ngModel)]="productdetails.description">
-                </div>
-                <div class="mb-3">
-                    <label for="category_id" class="form-label">category_id</label>
-                    <input type="string" class="form-control" id="category_id"
-                    name = "category_id" [(ngModel)]="productdetails.category_id">
+                    <label for="value" class="form-label">value</label>
+                    <input type="string" class="form-control" id="value"
+                    name = "value" [(ngModel)]="parameterdetails.value">
                 </div>
                 <button type="submit" class="btn btn-primary mr-10">Submit</button>
-                <button type="button" class="btn btn-danger"(click)="deleteProduct(productdetails.id)">Delete</button>
+                <button type="button" class="btn btn-danger"(click)="deleteProduct(parameterdetails.id)">Delete</button>
 
             </form>
         </div>

@@ -11,6 +11,9 @@ import { ShowCategorizedComponent } from './Components/show-categorized/show-cat
 import { ParameterizedComponent } from './Components/parameterized/parameterized.component';
 import {MatStepperModule} from '@angular/material/stepper';
 import { EditParameterizedComponent } from './Components/edit-parameterized/edit-parameterized.component';
+import { AddCategoryComponent } from './Components/add-category/add-category.component';
+import { AddprodparamComponent } from './Components/addprodparam/addprodparam.component';
+import { AddproductComponent } from './Components/addproduct/addproduct.component';
 
 
 
@@ -24,6 +27,9 @@ import { EditParameterizedComponent } from './Components/edit-parameterized/edit
     ShowCategorizedComponent,
     ParameterizedComponent,
     EditParameterizedComponent,
+    AddCategoryComponent,
+    AddprodparamComponent,
+    AddproductComponent,
   ],
   imports: [
     BrowserModule,
