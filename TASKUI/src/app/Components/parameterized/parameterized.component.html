@@ -1,0 +1,25 @@
+<div class="container ">
+    <h1>Products</h1>
+    <table class="table table-striped table-hover" *ngIf="param && param.length > 0">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>value</th>
+                <th>product_id</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of param">
+                <ng-container *ngIf="product.product_id === productId">
+                    <td>{{product.id}}</td>
+                    <td>{{product.name}}</td>
+                    <td>{{product.value}}</td>
+                    <td>{{product.product_id}}</td>
+                    <td><a [routerLink]="['Param',product.id]">view</a></td>
+                </ng-container>
+            </tr>
+        </tbody>
+    </table>
+    <p *ngIf="!param || param.length<=0">No Products</p>
+</div>

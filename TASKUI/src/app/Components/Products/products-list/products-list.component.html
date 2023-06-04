@@ -1,0 +1,25 @@
+<div class="container ">
+    <h1>Products</h1>
+    <table class="table table-striped table-hover" *ngIf="products && products.length > 0">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Category_id</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products">
+                <td>{{product.id}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.description}}</td>
+                <td>{{product.category_id}}</td>
+                <td><a [routerLink]="['edit',product.id]">view</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <p *ngIf="!products || products.length<=0">No Products</p>
+</div>

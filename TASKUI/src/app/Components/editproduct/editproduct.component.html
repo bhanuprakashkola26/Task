@@ -1,0 +1,36 @@
+<div class="container">
+    <h1 class="mb-3">Update Product</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <form #form="ngForm" (ngSubmit)="updateProduct()">
+                <div class="mb-3">
+                    <label for="Id" class="form-label">Id</label>
+                    <input type="number" class="form-control" id="Id" 
+                    name = " id" [(ngModel)]="productdetails.id">
+                </div>
+                <div class="mb-3">
+                    <label for="Name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="Name"
+                    name = "name" [(ngModel)]="productdetails.name">
+                </div>
+                <div class="mb-3">
+                    <label for="Price" class="form-label">Price</label>
+                    <input type="number" class="form-control" id="Price"
+                    name = "price" [(ngModel)]="productdetails.price">
+                </div>
+                <div class="mb-3">
+                    <label for="Description" class="form-label">Description</label>
+                    <input type="string" class="form-control" id="Description"
+                    name = "description" [(ngModel)]="productdetails.description">
+                </div>
+                <div class="mb-3">
+                    <label for="category_id" class="form-label">category_id</label>
+                    <input type="string" class="form-control" id="category_id"
+                    name = "category_id" [(ngModel)]="productdetails.category_id">
+                </div>
+                <button type="submit" class="btn btn-primary mr-10">Submit</button>
+                <button type="button" class="btn btn-danger"(click)="deleteProduct(productdetails.id)">Delete</button>
+
+            </form>
+        </div>
+    </div>
